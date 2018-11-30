@@ -28,7 +28,6 @@
 		73D7391221B156BF00D34993 /* MapKitSnapshotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391121B156BF00D34993 /* MapKitSnapshotImage.swift */; };
 		73D7391521B1690200D34993 /* MapKitUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391421B1690200D34993 /* MapKitUtilities.swift */; };
 		73D7391721B16C4600D34993 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 73D7391621B16C4600D34993 /* README.md */; };
-		73D7391921B173CF00D34993 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391821B173CF00D34993 /* UIView+Extensions.swift */; };
 		73D7391B21B174FF00D34993 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391A21B174FF00D34993 /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +75,6 @@
 		73D7391121B156BF00D34993 /* MapKitSnapshotImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitSnapshotImage.swift; sourceTree = "<group>"; };
 		73D7391421B1690200D34993 /* MapKitUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitUtilities.swift; sourceTree = "<group>"; };
 		73D7391621B16C4600D34993 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		73D7391821B173CF00D34993 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		73D7391A21B174FF00D34993 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		89844470ACA34D129B060C0A /* Pods-payconiqUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqUITests/Pods-payconiqUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A961038B82F9EBEC56422548 /* Pods-payconiq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payconiq/Pods-payconiq.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 		73D7390921B05A1200D34993 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				73D7391821B173CF00D34993 /* UIView+Extensions.swift */,
 				73D7390A21B05B3300D34993 /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -542,7 +539,6 @@
 			files = (
 				73D7390F21B138C300D34993 /* ListTransactionTableViewCell.swift in Sources */,
 				7350052221AF0831004E0CAC /* Transaction.swift in Sources */,
-				73D7391921B173CF00D34993 /* UIView+Extensions.swift in Sources */,
 				7350051B21AEEB56004E0CAC /* NetworkConstants.swift in Sources */,
 				7350051821AEEAFC004E0CAC /* NetworkFetchable.swift in Sources */,
 				73D7390821B055FD00D34993 /* AlertDisplayable.swift in Sources */,

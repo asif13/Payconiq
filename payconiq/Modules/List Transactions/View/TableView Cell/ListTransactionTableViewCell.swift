@@ -19,19 +19,13 @@ class ListTransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundCellView: UIView!
     let emptyLabelText = "--"
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        backgroundCellView.dropShadow(UIColor.black.withAlphaComponent(40))
-    }
-    
     func updateCell(transaction:Transaction){
         descriptionLbl.text = transaction.description ?? emptyLabelText
-        dateLbl.text = transaction.date ?? emptyLabelText
         effectiveDateLbl.text = transaction.effectiveDate ?? emptyLabelText
         amountLbl.text = transaction.amount ?? emptyLabelText
         if let coordinates = transaction.coordinates{
             mapSnapshotImg.setSnapshotOfLocationAsImage(key: coordinates)
         }
     }
+   
 }

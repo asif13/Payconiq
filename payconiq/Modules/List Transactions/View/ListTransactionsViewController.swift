@@ -8,6 +8,7 @@
 
 import UIKit
 class ListTransactionsViewController: UIViewController,AlertDisplayable {
+   
     let viewModel = ListTransactionsViewModel()
     @IBOutlet weak var transactionListTbl: UITableView!
     let cellIdentifier = "ListTransactionCell"

@@ -9,5 +9,5 @@
 import UIKit
 
 struct ColorConstants {
-    static let payconiqPink = UIColor(displayP3Red: 1, green: 0, blue: 102, alpha: 1)
+    static let shadowColor = UIColor.black.withAlphaComponent(19)
 }
