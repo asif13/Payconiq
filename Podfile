@@ -6,8 +6,9 @@ target 'payconiq' do
   use_frameworks!
 
   # Pods for payconiq
-  pod 'Moya'
-
+  pod 'Alamofire'
+  #Loading Indicator
+  pod 'NVActivityIndicatorView'
   target 'payconiqTests' do
     inherit! :search_paths
     # Pods for testing

@@ -59,6 +59,12 @@
                                                                 <constraint firstAttribute="width" constant="43" id="83M-zr-Hz6"/>
                                                                 <constraint firstAttribute="height" constant="50" id="jZC-BO-Ef5"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,7 +120,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4531212" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFw-gx-2i7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFw-gx-2i7">
                                         <rect key="frame" x="62" y="37" width="251" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="sI5-ts-lMS"/>
@@ -151,6 +157,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="MVW-SI-Teg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="accountBalance" destination="IFw-gx-2i7" id="Gac-HL-7Fz"/>
                         <outlet property="transactionListTbl" destination="bV2-c8-jh1" id="lDp-62-oVh"/>
                     </connections>
                 </viewController>

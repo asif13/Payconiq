@@ -24,10 +24,16 @@ struct PayconiqUtilities {
         
         return  CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1])
     }
+    /*
+     Convert amount from string to Double
+     */
     static func parseAmount(_ amountStr:String?)->Double?{
         guard let amount = amountStr else { return nil }
         return Double(amount.replacingOccurrences(of: ",", with: "."))
     }
+    /*
+     Convert amount from string to local currency string
+     */
     static func parseAmountToCurrency(_ amountStr:String?)->String?{
         guard let amount = amountStr,
               let amountDouble = Double(amount.replacingOccurrences(of: ",", with: "."))

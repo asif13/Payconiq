@@ -184,7 +184,6 @@
 		7350050C21AEBB21004E0CAC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7350050F21AEC99C004E0CAC /* Login */,
 				7350050D21AEBB2B004E0CAC /* List Transactions */,
 			);
 			path = Modules;
@@ -199,13 +198,6 @@
 				73D7390C21B0694400D34993 /* View */,
 			);
 			path = "List Transactions";
-			sourceTree = "<group>";
-		};
-		7350050F21AEC99C004E0CAC /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		7350051421AECA4A004E0CAC /* Storyboards */ = {
@@ -492,16 +484,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-payconiq/Pods-payconiq-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

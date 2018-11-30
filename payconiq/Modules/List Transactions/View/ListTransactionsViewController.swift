@@ -7,8 +7,10 @@
 //
 
 import UIKit
-class ListTransactionsViewController: UIViewController,AlertDisplayable {
+import NVActivityIndicatorView
+class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivityIndicatorViewable {
    
+    @IBOutlet weak var accountBalance: UILabel!
     let viewModel = ListTransactionsViewModel()
     @IBOutlet weak var transactionListTbl: UITableView!
     let cellIdentifier = "ListTransactionCell"
@@ -17,9 +19,18 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable {
         fetchTransactions()
     }
     func fetchTransactions(){
-        viewModel.fetchTransactions(successBlock: {
+        startAnimating(message: "Loading".localizedString, type: .circleStrokeSpin)
+        viewModel.fetchTransactions(successBlock: { isFinal in
             DispatchQueue.main.async { [weak self] in
+                
                 self?.transactionListTbl.reloadData()
+                self?.stopAnimating()
+                if isFinal {
+                    if let sum = self?.viewModel.getTotalBalance(){
+                        self?.accountBalance.text = PayconiqUtilities.parseAmountToCurrency("\(sum)")
+                    }
+                }
+                
             }
         }) { (error) in
             DispatchQueue.main.async { [weak self] in
