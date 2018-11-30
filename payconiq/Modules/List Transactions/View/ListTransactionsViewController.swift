@@ -18,6 +18,11 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
         super.viewDidLoad()
         fetchTransactions()
     }
+    @IBAction func transactionTypeChanged(_ sender: UISegmentedControl) {
+        guard let filterType = TransactionType(rawValue: sender.selectedSegmentIndex) else { return}
+        viewModel.filterTransactions(filterType)
+        transactionListTbl.reloadData()
+    }
     func fetchTransactions(){
         startAnimating(message: "Loading".localizedString, type: .circleStrokeSpin)
         viewModel.fetchTransactions(successBlock: { isFinal in
@@ -38,18 +43,19 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
             }
         }
     }
+    
 }
 
 extension ListTransactionsViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.transactions.count
+        return viewModel.filteredTransactions.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ListTransactionTableViewCell else {
             return UITableViewCell()
         }
-        cell.updateCell(transaction: viewModel.transactions[indexPath.row])
+        cell.updateCell(transaction: viewModel.filteredTransactions[indexPath.row])
         return cell
     }
 

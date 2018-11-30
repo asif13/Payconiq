@@ -8,8 +8,20 @@
 
 import UIKit
 
+enum TransactionType : Int {
+    case all = 0
+    case debit
+    case deposit
+}
+
 class ListTransactionsViewModel: NetworkFetchable {
-    var transactions = [Transaction]()
+    private var transactions = [Transaction](){
+        didSet {
+            //set filtered transaction when transactions is set
+            filteredTransactions = transactions
+        }
+    }
+    var filteredTransactions = [Transaction]()
     func fetchTransactions(successBlock: @escaping ((_ isFinal:Bool)->()),failureBlock: @escaping ((String)->())){
         getData(url: NetworkConstants.transactionList.endPoint) { [weak self] (response) in
 
@@ -31,6 +43,17 @@ class ListTransactionsViewModel: NetworkFetchable {
     func getTotalBalance()->Double{
        return transactions.reduce(into: 0) { (result, transaction) in
             result = result + transaction.amount
+        }
+    }
+    func filterTransactions(_ type: TransactionType){
+        switch type {
+            
+        case .all:
+            filteredTransactions = transactions
+        case .debit:
+            filteredTransactions = transactions.filter({$0.amount < 0})
+        case .deposit:
+            filteredTransactions = transactions.filter({$0.amount >= 0})
         }
     }
 }
