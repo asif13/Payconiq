@@ -1,0 +1,6 @@
+framework module Pods_payconiqUITests {
+  umbrella header "Pods-payconiqUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

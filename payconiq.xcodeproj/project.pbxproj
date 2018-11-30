@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		097A0E98CE1990A77684DD20 /* Pods_payconiq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51FD2E219D4865F9E3F5E0F /* Pods_payconiq.framework */; };
+		35E6BC8AF6FB82F6484CCA2F /* Pods_payconiqUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B02C34184AABC699E5A582 /* Pods_payconiqUITests.framework */; };
+		4B52CFAE6E4EF47A31D95E64 /* Pods_payconiqTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB1E1469DAAE1622ABD4C17 /* Pods_payconiqTests.framework */; };
 		735004DF21AEBA85004E0CAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735004DE21AEBA85004E0CAC /* AppDelegate.swift */; };
-		735004E121AEBA85004E0CAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735004E021AEBA85004E0CAC /* ViewController.swift */; };
-		735004E421AEBA85004E0CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735004E221AEBA85004E0CAC /* Main.storyboard */; };
 		735004E621AEBA8B004E0CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735004E521AEBA8B004E0CAC /* Assets.xcassets */; };
 		735004E921AEBA8B004E0CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735004E721AEBA8B004E0CAC /* LaunchScreen.storyboard */; };
 		735004F421AEBA8B004E0CAC /* payconiqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735004F321AEBA8B004E0CAC /* payconiqTests.swift */; };
 		735004FF21AEBA8B004E0CAC /* payconiqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735004FE21AEBA8B004E0CAC /* payconiqUITests.swift */; };
+		7350051121AEC9C6004E0CAC /* ListTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7350051021AEC9C6004E0CAC /* ListTransaction.storyboard */; };
+		7350051321AECA34004E0CAC /* ListTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051221AECA34004E0CAC /* ListTransactionsViewController.swift */; };
+		7350051621AEEABE004E0CAC /* ListTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051521AEEABE004E0CAC /* ListTransactionsViewModel.swift */; };
+		7350051821AEEAFC004E0CAC /* NetworkFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051721AEEAFC004E0CAC /* NetworkFetchable.swift */; };
+		7350051B21AEEB56004E0CAC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051A21AEEB56004E0CAC /* NetworkConstants.swift */; };
+		7350051D21AEEC2F004E0CAC /* ErrorMessagesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051C21AEEC2F004E0CAC /* ErrorMessagesConstants.swift */; };
+		7350052221AF0831004E0CAC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350052121AF0831004E0CAC /* Transaction.swift */; };
+		73D7390821B055FD00D34993 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390721B055FD00D34993 /* AlertDisplayable.swift */; };
+		73D7390B21B05B3300D34993 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390A21B05B3300D34993 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29B02C34184AABC699E5A582 /* Pods_payconiqUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_payconiqUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F78DD5654DAD2E1512E06D4 /* Pods-payconiqUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqUITests/Pods-payconiqUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		735004DB21AEBA85004E0CAC /* payconiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = payconiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		735004DE21AEBA85004E0CAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		735004E021AEBA85004E0CAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		735004E321AEBA85004E0CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		735004E521AEBA8B004E0CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		735004E821AEBA8B004E0CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		735004EA21AEBA8B004E0CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +57,22 @@
 		735004FA21AEBA8B004E0CAC /* payconiqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = payconiqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		735004FE21AEBA8B004E0CAC /* payconiqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payconiqUITests.swift; sourceTree = "<group>"; };
 		7350050021AEBA8B004E0CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7350051021AEC9C6004E0CAC /* ListTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListTransaction.storyboard; sourceTree = "<group>"; };
+		7350051221AECA34004E0CAC /* ListTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionsViewController.swift; sourceTree = "<group>"; };
+		7350051521AEEABE004E0CAC /* ListTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionsViewModel.swift; sourceTree = "<group>"; };
+		7350051721AEEAFC004E0CAC /* NetworkFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchable.swift; sourceTree = "<group>"; };
+		7350051A21AEEB56004E0CAC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		7350051C21AEEC2F004E0CAC /* ErrorMessagesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessagesConstants.swift; sourceTree = "<group>"; };
+		7350052121AF0831004E0CAC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		73D7390721B055FD00D34993 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
+		73D7390A21B05B3300D34993 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		89844470ACA34D129B060C0A /* Pods-payconiqUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqUITests/Pods-payconiqUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A961038B82F9EBEC56422548 /* Pods-payconiq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payconiq/Pods-payconiq.debug.xcconfig"; sourceTree = "<group>"; };
+		AFCB6C80679E79E77F686EA6 /* Pods-payconiqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqTests/Pods-payconiqTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE387191F4B57E6C9576A6C5 /* Pods-payconiqTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqTests/Pods-payconiqTests.release.xcconfig"; sourceTree = "<group>"; };
+		DFB1E1469DAAE1622ABD4C17 /* Pods_payconiqTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_payconiqTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E51FD2E219D4865F9E3F5E0F /* Pods_payconiq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_payconiq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E82A81EF2660443B0F828103 /* Pods-payconiq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiq.release.xcconfig"; path = "Pods/Target Support Files/Pods-payconiq/Pods-payconiq.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097A0E98CE1990A77684DD20 /* Pods_payconiq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B52CFAE6E4EF47A31D95E64 /* Pods_payconiqTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E6BC8AF6FB82F6484CCA2F /* Pods_payconiqUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36F3445A12D2EE9D85727D29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E51FD2E219D4865F9E3F5E0F /* Pods_payconiq.framework */,
+				DFB1E1469DAAE1622ABD4C17 /* Pods_payconiqTests.framework */,
+				29B02C34184AABC699E5A582 /* Pods_payconiqUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		735004D221AEBA84004E0CAC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				735004F221AEBA8B004E0CAC /* payconiqTests */,
 				735004FD21AEBA8B004E0CAC /* payconiqUITests */,
 				735004DC21AEBA85004E0CAC /* Products */,
+				9528FCC8E7367DA414C02925 /* Pods */,
+				36F3445A12D2EE9D85727D29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +138,12 @@
 		735004DD21AEBA85004E0CAC /* payconiq */ = {
 			isa = PBXGroup;
 			children = (
+				73D7390921B05A1200D34993 /* Extensions */,
+				7350051E21AEFEF2004E0CAC /* Protocols */,
+				7350051921AEEB43004E0CAC /* Constants */,
+				7350050C21AEBB21004E0CAC /* Modules */,
+				7350051421AECA4A004E0CAC /* Storyboards */,
 				735004DE21AEBA85004E0CAC /* AppDelegate.swift */,
-				735004E021AEBA85004E0CAC /* ViewController.swift */,
-				735004E221AEBA85004E0CAC /* Main.storyboard */,
 				735004E521AEBA8B004E0CAC /* Assets.xcassets */,
 				735004E721AEBA8B004E0CAC /* LaunchScreen.storyboard */,
 				735004EA21AEBA8B004E0CAC /* Info.plist */,
@@ -125,6 +169,104 @@
 			path = payconiqUITests;
 			sourceTree = "<group>";
 		};
+		7350050C21AEBB21004E0CAC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7350050F21AEC99C004E0CAC /* Login */,
+				7350050D21AEBB2B004E0CAC /* List Transactions */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7350050D21AEBB2B004E0CAC /* List Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				7350051F21AF0819004E0CAC /* Model */,
+				7350052021AF081F004E0CAC /* ViewModel */,
+				73D7390C21B0694400D34993 /* View */,
+			);
+			path = "List Transactions";
+			sourceTree = "<group>";
+		};
+		7350050F21AEC99C004E0CAC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7350051421AECA4A004E0CAC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7350051021AEC9C6004E0CAC /* ListTransaction.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7350051921AEEB43004E0CAC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7350051A21AEEB56004E0CAC /* NetworkConstants.swift */,
+				7350051C21AEEC2F004E0CAC /* ErrorMessagesConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7350051E21AEFEF2004E0CAC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7350051721AEEAFC004E0CAC /* NetworkFetchable.swift */,
+				73D7390721B055FD00D34993 /* AlertDisplayable.swift */,
+			);
+			name = Protocols;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7350051F21AF0819004E0CAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7350052121AF0831004E0CAC /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7350052021AF081F004E0CAC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7350051521AEEABE004E0CAC /* ListTransactionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		73D7390921B05A1200D34993 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				73D7390A21B05B3300D34993 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		73D7390C21B0694400D34993 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7350051221AECA34004E0CAC /* ListTransactionsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9528FCC8E7367DA414C02925 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A961038B82F9EBEC56422548 /* Pods-payconiq.debug.xcconfig */,
+				E82A81EF2660443B0F828103 /* Pods-payconiq.release.xcconfig */,
+				AFCB6C80679E79E77F686EA6 /* Pods-payconiqTests.debug.xcconfig */,
+				BE387191F4B57E6C9576A6C5 /* Pods-payconiqTests.release.xcconfig */,
+				5F78DD5654DAD2E1512E06D4 /* Pods-payconiqUITests.debug.xcconfig */,
+				89844470ACA34D129B060C0A /* Pods-payconiqUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +274,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7350050321AEBA8B004E0CAC /* Build configuration list for PBXNativeTarget "payconiq" */;
 			buildPhases = (
+				D1065BCC41CD60D32EE5E814 /* [CP] Check Pods Manifest.lock */,
 				735004D721AEBA85004E0CAC /* Sources */,
 				735004D821AEBA85004E0CAC /* Frameworks */,
 				735004D921AEBA85004E0CAC /* Resources */,
+				C66AE21C71B28A67C44267CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +293,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7350050621AEBA8B004E0CAC /* Build configuration list for PBXNativeTarget "payconiqTests" */;
 			buildPhases = (
+				46E722518BFB6B85ADD027A3 /* [CP] Check Pods Manifest.lock */,
 				735004EB21AEBA8B004E0CAC /* Sources */,
 				735004EC21AEBA8B004E0CAC /* Frameworks */,
 				735004ED21AEBA8B004E0CAC /* Resources */,
@@ -167,6 +312,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7350050921AEBA8B004E0CAC /* Build configuration list for PBXNativeTarget "payconiqUITests" */;
 			buildPhases = (
+				3A5B1F685904425B352497D1 /* [CP] Check Pods Manifest.lock */,
 				735004F621AEBA8B004E0CAC /* Sources */,
 				735004F721AEBA8B004E0CAC /* Frameworks */,
 				735004F821AEBA8B004E0CAC /* Resources */,
@@ -231,7 +377,7 @@
 			files = (
 				735004E921AEBA8B004E0CAC /* LaunchScreen.storyboard in Resources */,
 				735004E621AEBA8B004E0CAC /* Assets.xcassets in Resources */,
-				735004E421AEBA85004E0CAC /* Main.storyboard in Resources */,
+				7350051121AEC9C6004E0CAC /* ListTransaction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +397,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A5B1F685904425B352497D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-payconiqUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46E722518BFB6B85ADD027A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-payconiqTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C66AE21C71B28A67C44267CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-payconiq/Pods-payconiq-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-payconiq/Pods-payconiq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1065BCC41CD60D32EE5E814 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-payconiq-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		735004D721AEBA85004E0CAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				735004E121AEBA85004E0CAC /* ViewController.swift in Sources */,
+				7350052221AF0831004E0CAC /* Transaction.swift in Sources */,
+				7350051B21AEEB56004E0CAC /* NetworkConstants.swift in Sources */,
+				7350051821AEEAFC004E0CAC /* NetworkFetchable.swift in Sources */,
+				73D7390821B055FD00D34993 /* AlertDisplayable.swift in Sources */,
+				73D7390B21B05B3300D34993 /* String+Extensions.swift in Sources */,
+				7350051D21AEEC2F004E0CAC /* ErrorMessagesConstants.swift in Sources */,
 				735004DF21AEBA85004E0CAC /* AppDelegate.swift in Sources */,
+				7350051621AEEABE004E0CAC /* ListTransactionsViewModel.swift in Sources */,
+				7350051321AECA34004E0CAC /* ListTransactionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +541,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		735004E221AEBA85004E0CAC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				735004E321AEBA85004E0CAC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		735004E721AEBA8B004E0CAC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,10 +670,13 @@
 		};
 		7350050421AEBA8B004E0CAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A961038B82F9EBEC56422548 /* Pods-payconiq.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = payconiq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,10 +690,13 @@
 		};
 		7350050521AEBA8B004E0CAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82A81EF2660443B0F828103 /* Pods-payconiq.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = payconiq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +710,7 @@
 		};
 		7350050721AEBA8B004E0CAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFCB6C80679E79E77F686EA6 /* Pods-payconiqTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +731,7 @@
 		};
 		7350050821AEBA8B004E0CAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE387191F4B57E6C9576A6C5 /* Pods-payconiqTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +752,7 @@
 		};
 		7350050A21AEBA8B004E0CAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F78DD5654DAD2E1512E06D4 /* Pods-payconiqUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +772,7 @@
 		};
 		7350050B21AEBA8B004E0CAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89844470ACA34D129B060C0A /* Pods-payconiqUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
