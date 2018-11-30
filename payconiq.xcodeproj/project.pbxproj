@@ -26,7 +26,7 @@
 		73D7390B21B05B3300D34993 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390A21B05B3300D34993 /* String+Extensions.swift */; };
 		73D7390F21B138C300D34993 /* ListTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */; };
 		73D7391221B156BF00D34993 /* MapKitSnapshotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391121B156BF00D34993 /* MapKitSnapshotImage.swift */; };
-		73D7391521B1690200D34993 /* MapKitUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391421B1690200D34993 /* MapKitUtilities.swift */; };
+		73D7391521B1690200D34993 /* PayconiqUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391421B1690200D34993 /* PayconiqUtilities.swift */; };
 		73D7391721B16C4600D34993 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 73D7391621B16C4600D34993 /* README.md */; };
 		73D7391B21B174FF00D34993 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391A21B174FF00D34993 /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,7 @@
 		73D7390A21B05B3300D34993 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionTableViewCell.swift; sourceTree = "<group>"; };
 		73D7391121B156BF00D34993 /* MapKitSnapshotImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitSnapshotImage.swift; sourceTree = "<group>"; };
-		73D7391421B1690200D34993 /* MapKitUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitUtilities.swift; sourceTree = "<group>"; };
+		73D7391421B1690200D34993 /* PayconiqUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqUtilities.swift; sourceTree = "<group>"; };
 		73D7391621B16C4600D34993 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		73D7391A21B174FF00D34993 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		89844470ACA34D129B060C0A /* Pods-payconiqUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqUITests/Pods-payconiqUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 		73D7391321B168EA00D34993 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				73D7391421B1690200D34993 /* MapKitUtilities.swift */,
+				73D7391421B1690200D34993 /* PayconiqUtilities.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -548,7 +548,7 @@
 				73D7391B21B174FF00D34993 /* ColorConstants.swift in Sources */,
 				735004DF21AEBA85004E0CAC /* AppDelegate.swift in Sources */,
 				7350051621AEEABE004E0CAC /* ListTransactionsViewModel.swift in Sources */,
-				73D7391521B1690200D34993 /* MapKitUtilities.swift in Sources */,
+				73D7391521B1690200D34993 /* PayconiqUtilities.swift in Sources */,
 				7350051321AECA34004E0CAC /* ListTransactionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

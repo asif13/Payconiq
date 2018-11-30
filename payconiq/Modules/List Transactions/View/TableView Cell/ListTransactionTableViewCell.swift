@@ -12,7 +12,6 @@ class ListTransactionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mapSnapshotImg: UIImageView!
     @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var effectiveDateLbl: UILabel!
     @IBOutlet weak var amountLbl: UILabel!
     
@@ -22,7 +21,8 @@ class ListTransactionTableViewCell: UITableViewCell {
     func updateCell(transaction:Transaction){
         descriptionLbl.text = transaction.description ?? emptyLabelText
         effectiveDateLbl.text = transaction.effectiveDate ?? emptyLabelText
-        amountLbl.text = transaction.amount ?? emptyLabelText
+        amountLbl.text = transaction.currency ?? emptyLabelText
+        amountLbl.textColor = transaction.amount >= 0 ? ColorConstants.depositMoney : ColorConstants.deductionMoney
         if let coordinates = transaction.coordinates{
             mapSnapshotImg.setSnapshotOfLocationAsImage(key: coordinates)
         }

@@ -11,19 +11,30 @@ import MapKit
 struct Transaction: Codable {
     enum CodingKeys: String, CodingKey {
         case description = "description"
-        case coordinatesString = "coordinates"
+        case coordinatesStr = "coordinates"
         case date = "date"
         case effectiveDate = "effective date"
-        case amount = "amount"
+        case amountStr = "amount"
     }
     let description: String?
-    let coordinatesString: String?
+    let coordinatesStr: String?
     let date: String?
     let effectiveDate: String?
-    let amount: String?
+    let amountStr: String?
     var coordinates: CLLocationCoordinate2D? {
         get {
-            return MapKitUtilities.parseCoordinates(coordinate: coordinatesString)
+            return PayconiqUtilities.parseCoordinates(coordinatesStr)
         }
     }
+    var amount:Double{
+        get {
+            return PayconiqUtilities.parseAmount(amountStr) ?? 0
+        }
+    }
+    var currency:String?{
+        get {
+            return PayconiqUtilities.parseAmountToCurrency(amountStr)
+        }
+    }
+    
 }
