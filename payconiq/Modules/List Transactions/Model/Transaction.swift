@@ -7,16 +7,23 @@
 //
 
 import Foundation
-
+import MapKit
 struct Transaction: Codable {
     enum CodingKeys: String, CodingKey {
-        case coordinates = "coordinates"
-        case data = "data"
+        case description = "description"
+        case coordinatesString = "coordinates"
+        case date = "date"
         case effectiveDate = "effective date"
         case amount = "amount"
     }
-    let coordinates: String?
-    let data: String?
+    let description: String?
+    let coordinatesString: String?
+    let date: String?
     let effectiveDate: String?
     let amount: String?
+    var coordinates: CLLocationCoordinate2D? {
+        get {
+            return MapKitUtilities.parseCoordinates(coordinate: coordinatesString)
+        }
+    }
 }

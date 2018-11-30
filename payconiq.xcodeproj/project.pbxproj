@@ -24,6 +24,12 @@
 		7350052221AF0831004E0CAC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350052121AF0831004E0CAC /* Transaction.swift */; };
 		73D7390821B055FD00D34993 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390721B055FD00D34993 /* AlertDisplayable.swift */; };
 		73D7390B21B05B3300D34993 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390A21B05B3300D34993 /* String+Extensions.swift */; };
+		73D7390F21B138C300D34993 /* ListTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */; };
+		73D7391221B156BF00D34993 /* MapKitSnapshotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391121B156BF00D34993 /* MapKitSnapshotImage.swift */; };
+		73D7391521B1690200D34993 /* MapKitUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391421B1690200D34993 /* MapKitUtilities.swift */; };
+		73D7391721B16C4600D34993 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 73D7391621B16C4600D34993 /* README.md */; };
+		73D7391921B173CF00D34993 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391821B173CF00D34993 /* UIView+Extensions.swift */; };
+		73D7391B21B174FF00D34993 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7391A21B174FF00D34993 /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,12 @@
 		7350052121AF0831004E0CAC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		73D7390721B055FD00D34993 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 		73D7390A21B05B3300D34993 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		73D7391121B156BF00D34993 /* MapKitSnapshotImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitSnapshotImage.swift; sourceTree = "<group>"; };
+		73D7391421B1690200D34993 /* MapKitUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitUtilities.swift; sourceTree = "<group>"; };
+		73D7391621B16C4600D34993 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		73D7391821B173CF00D34993 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		73D7391A21B174FF00D34993 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		89844470ACA34D129B060C0A /* Pods-payconiqUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqUITests/Pods-payconiqUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A961038B82F9EBEC56422548 /* Pods-payconiq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payconiq/Pods-payconiq.debug.xcconfig"; sourceTree = "<group>"; };
 		AFCB6C80679E79E77F686EA6 /* Pods-payconiqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payconiqTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-payconiqTests/Pods-payconiqTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +150,8 @@
 		735004DD21AEBA85004E0CAC /* payconiq */ = {
 			isa = PBXGroup;
 			children = (
+				73D7391621B16C4600D34993 /* README.md */,
+				73D7391321B168EA00D34993 /* Utility */,
 				73D7390921B05A1200D34993 /* Extensions */,
 				7350051E21AEFEF2004E0CAC /* Protocols */,
 				7350051921AEEB43004E0CAC /* Constants */,
@@ -181,6 +195,7 @@
 		7350050D21AEBB2B004E0CAC /* List Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				73D7391021B1569700D34993 /* Extensions */,
 				7350051F21AF0819004E0CAC /* Model */,
 				7350052021AF081F004E0CAC /* ViewModel */,
 				73D7390C21B0694400D34993 /* View */,
@@ -208,6 +223,7 @@
 			children = (
 				7350051A21AEEB56004E0CAC /* NetworkConstants.swift */,
 				7350051C21AEEC2F004E0CAC /* ErrorMessagesConstants.swift */,
+				73D7391A21B174FF00D34993 /* ColorConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -241,6 +257,7 @@
 		73D7390921B05A1200D34993 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				73D7391821B173CF00D34993 /* UIView+Extensions.swift */,
 				73D7390A21B05B3300D34993 /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -249,9 +266,34 @@
 		73D7390C21B0694400D34993 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				73D7390D21B1384600D34993 /* TableView Cell */,
 				7350051221AECA34004E0CAC /* ListTransactionsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		73D7390D21B1384600D34993 /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */,
+			);
+			path = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		73D7391021B1569700D34993 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				73D7391121B156BF00D34993 /* MapKitSnapshotImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		73D7391321B168EA00D34993 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				73D7391421B1690200D34993 /* MapKitUtilities.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		9528FCC8E7367DA414C02925 /* Pods */ = {
@@ -377,6 +419,7 @@
 			files = (
 				735004E921AEBA8B004E0CAC /* LaunchScreen.storyboard in Resources */,
 				735004E621AEBA8B004E0CAC /* Assets.xcassets in Resources */,
+				73D7391721B16C4600D34993 /* README.md in Resources */,
 				7350051121AEC9C6004E0CAC /* ListTransaction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,14 +540,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D7390F21B138C300D34993 /* ListTransactionTableViewCell.swift in Sources */,
 				7350052221AF0831004E0CAC /* Transaction.swift in Sources */,
+				73D7391921B173CF00D34993 /* UIView+Extensions.swift in Sources */,
 				7350051B21AEEB56004E0CAC /* NetworkConstants.swift in Sources */,
 				7350051821AEEAFC004E0CAC /* NetworkFetchable.swift in Sources */,
 				73D7390821B055FD00D34993 /* AlertDisplayable.swift in Sources */,
+				73D7391221B156BF00D34993 /* MapKitSnapshotImage.swift in Sources */,
 				73D7390B21B05B3300D34993 /* String+Extensions.swift in Sources */,
 				7350051D21AEEC2F004E0CAC /* ErrorMessagesConstants.swift in Sources */,
+				73D7391B21B174FF00D34993 /* ColorConstants.swift in Sources */,
 				735004DF21AEBA85004E0CAC /* AppDelegate.swift in Sources */,
 				7350051621AEEABE004E0CAC /* ListTransactionsViewModel.swift in Sources */,
+				73D7391521B1690200D34993 /* MapKitUtilities.swift in Sources */,
 				7350051321AECA34004E0CAC /* ListTransactionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

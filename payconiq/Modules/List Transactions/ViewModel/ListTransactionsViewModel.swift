@@ -9,20 +9,20 @@
 import UIKit
 
 class ListTransactionsViewModel: NetworkFetchable {
-
-    func fetchTransactions(successBlock: @escaping ((_ transactions : [Transaction])->()),failureBlock: @escaping ((String)->())){
-        getData(url: NetworkConstants.transactionList.endPoint) { (response) in
+    var transactions = [Transaction]()
+    func fetchTransactions(successBlock: @escaping (()->()),failureBlock: @escaping ((String)->())){
+        getData(url: NetworkConstants.transactionList.endPoint) { [weak self] (response) in
 
             switch response {
                 
-            case .success(let data):
+            case .success(_ ,let data):
                 let decoder = JSONDecoder()
                 guard let transactions = try? decoder.decode([Transaction].self, from: data) else {
                     return
                 }
-                
-                successBlock(transactions)
-                
+                self?.transactions.append(contentsOf: transactions)
+                successBlock()
+
             case .failure(let error):
                 failureBlock(error)
             }

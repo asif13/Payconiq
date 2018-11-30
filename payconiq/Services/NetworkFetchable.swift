@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 enum NetworkResponseStatus {
-    case success(Data)
+    case success(Bool,Data) //Bool - Is there more paginated data to follow
     case failure(String)
 }
 
@@ -33,13 +33,16 @@ extension NetworkFetchable {
                 completion(.failure(NetworkErrors.serverError))
                 return
             }
-            completion(.success(data))
             guard let headers = response.response?.allHeaderFields,
                   let nextUrlString = headers["next-page"] as? String,
                   let nextUrl = URL(string: nextUrlString)
             else {
+                completion(.success(false, data))
                 return
             }
+            completion(.success(true, data))
+
+            //If there is next-url, fetch data
             self.getData(url: nextUrl, completion: completion)
         }
     }

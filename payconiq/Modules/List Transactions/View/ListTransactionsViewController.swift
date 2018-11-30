@@ -9,14 +9,16 @@
 import UIKit
 class ListTransactionsViewController: UIViewController,AlertDisplayable {
     let viewModel = ListTransactionsViewModel()
+    @IBOutlet weak var transactionListTbl: UITableView!
+    let cellIdentifier = "ListTransactionCell"
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchTransactions()
     }
     func fetchTransactions(){
-        viewModel.fetchTransactions(successBlock: { (transactions) in
+        viewModel.fetchTransactions(successBlock: {
             DispatchQueue.main.async { [weak self] in
-                print(transactions)
+                self?.transactionListTbl.reloadData()
             }
         }) { (error) in
             DispatchQueue.main.async { [weak self] in
@@ -24,4 +26,19 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable {
             }
         }
     }
+}
+
+extension ListTransactionsViewController: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.transactions.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ListTransactionTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.updateCell(transaction: viewModel.transactions[indexPath.row])
+        return cell
+    }
+
 }
