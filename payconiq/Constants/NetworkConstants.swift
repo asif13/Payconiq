@@ -9,13 +9,19 @@
 import Foundation
 
 enum NetworkConstants {
+    private static let baseUrl = "http://demo5481020.mockable.io"
+    
     case transactionList
+    case user
     
     var endPoint: URL {
         switch self {
         case .transactionList:
-            return URL(string: "http://demo5481020.mockable.io/transactions")!
+            return URL(string: "\(NetworkConstants.baseUrl)/transactions")!
+        case .user:
+            return URL(string: "\(NetworkConstants.baseUrl)/userinfo")!
         }
     }
+    
 }
 

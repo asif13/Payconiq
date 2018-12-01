@@ -35,10 +35,9 @@ struct PayconiqUtilities {
      Convert amount from string to local currency string
      */
     static func parseAmountToCurrency(_ amountStr:String?)->String?{
-        guard let amount = amountStr,
-              let amountDouble = Double(amount.replacingOccurrences(of: ",", with: "."))
+        guard let amount = parseAmount(amountStr)
             else { return nil }
-        let amountNSNumber = NSNumber(value: amountDouble)
+        let amountNSNumber = NSNumber(value: amount)
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "en_US")
         formatter.minimumFractionDigits = 0

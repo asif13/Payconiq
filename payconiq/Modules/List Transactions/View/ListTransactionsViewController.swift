@@ -18,6 +18,10 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
         super.viewDidLoad()
         fetchTransactions()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       tabBarController?.navigationItem.title =  "Transactions".localizedString
+    }
     @IBAction func transactionTypeChanged(_ sender: UISegmentedControl) {
         guard let filterType = TransactionType(rawValue: sender.selectedSegmentIndex) else { return}
         viewModel.filterTransactions(filterType)
@@ -39,6 +43,7 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
             }
         }) { (error) in
             DispatchQueue.main.async { [weak self] in
+                self?.stopAnimating()
                 self?.displayAlert(with: "Error".localizedString, message: error.localizedString)
             }
         }
