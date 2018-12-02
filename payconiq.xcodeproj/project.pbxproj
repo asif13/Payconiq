@@ -26,6 +26,7 @@
 		73D3583D21B29F5E00573D26 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583C21B29F5E00573D26 /* UserDetailViewModel.swift */; };
 		73D3584021B29F8D00573D26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583F21B29F8D00573D26 /* User.swift */; };
 		73D3584221B2B9B000573D26 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3584121B2B9B000573D26 /* Date+Extensions.swift */; };
+		73D3584421B3FCD800573D26 /* ListTransactionExpandedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3584321B3FCD800573D26 /* ListTransactionExpandedTableViewCell.swift */; };
 		73D7390821B055FD00D34993 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390721B055FD00D34993 /* AlertDisplayable.swift */; };
 		73D7390B21B05B3300D34993 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390A21B05B3300D34993 /* String+Extensions.swift */; };
 		73D7390F21B138C300D34993 /* ListTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */; };
@@ -77,6 +78,7 @@
 		73D3583C21B29F5E00573D26 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		73D3583F21B29F8D00573D26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		73D3584121B2B9B000573D26 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		73D3584321B3FCD800573D26 /* ListTransactionExpandedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionExpandedTableViewCell.swift; sourceTree = "<group>"; };
 		73D7390721B055FD00D34993 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 		73D7390A21B05B3300D34993 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionTableViewCell.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				73D7390E21B138C300D34993 /* ListTransactionTableViewCell.swift */,
+				73D3584321B3FCD800573D26 /* ListTransactionExpandedTableViewCell.swift */,
 			);
 			path = "TableView Cell";
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				7350051D21AEEC2F004E0CAC /* ErrorMessagesConstants.swift in Sources */,
 				73D7391B21B174FF00D34993 /* ColorConstants.swift in Sources */,
 				735004DF21AEBA85004E0CAC /* AppDelegate.swift in Sources */,
+				73D3584421B3FCD800573D26 /* ListTransactionExpandedTableViewCell.swift in Sources */,
 				7350051621AEEABE004E0CAC /* ListTransactionsViewModel.swift in Sources */,
 				73D3583D21B29F5E00573D26 /* UserDetailViewModel.swift in Sources */,
 				73D7391521B1690200D34993 /* PayconiqUtilities.swift in Sources */,

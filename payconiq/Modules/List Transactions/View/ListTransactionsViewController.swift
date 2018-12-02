@@ -13,7 +13,11 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
     @IBOutlet weak var accountBalance: UILabel!
     let viewModel = ListTransactionsViewModel()
     @IBOutlet weak var transactionListTbl: UITableView!
-    let cellIdentifier = "ListTransactionCell"
+    enum cellIdenitfiers:String {
+        case `default` = "ListTransactionCell"
+        case expanded = "ListTransactionExpandedCell"
+    }
+    var expandedCellIndexes = Set<Transaction>()
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchTransactions()
@@ -57,11 +61,24 @@ extension ListTransactionsViewController: UITableViewDelegate,UITableViewDataSou
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ListTransactionTableViewCell else {
+        let transaction = viewModel.filteredTransactions[indexPath.row]
+        let cellIdentifer:cellIdenitfiers = expandedCellIndexes.contains(transaction) ? .expanded : .default
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifer.rawValue, for: indexPath) as? ListTransactionTableViewCell else {
             return UITableViewCell()
         }
-        cell.updateCell(transaction: viewModel.filteredTransactions[indexPath.row])
+        cell.updateCell(transaction: transaction)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let transaction = viewModel.filteredTransactions[indexPath.row]
+
+        if expandedCellIndexes.contains(transaction) {
+            expandedCellIndexes.remove(transaction)
+        }else {
+            expandedCellIndexes.insert(transaction)
+        }
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 
 }

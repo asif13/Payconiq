@@ -8,7 +8,7 @@
 
 import Foundation
 import MapKit
-struct Transaction: Codable {
+struct Transaction: Codable,Hashable {
     enum CodingKeys: String, CodingKey {
         case description = "description"
         case coordinatesStr = "coordinates"
