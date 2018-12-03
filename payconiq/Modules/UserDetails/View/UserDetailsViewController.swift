@@ -17,10 +17,7 @@ class UserDetailsViewController: UIViewController,AlertDisplayable,NVActivityInd
         super.viewDidLoad()
         loadUserDetails()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.navigationItem.title =  "Profile".localizedString
-    }
+
     func loadUserDetails(){
         startAnimating(message: "Loading".localizedString, type: .circleStrokeSpin)
         viewModel.fetchUser(successBlock: {

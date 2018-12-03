@@ -20,4 +20,8 @@ class ListTransactionExpandedTableViewCell: ListTransactionTableViewCell {
         super.updateCell(transaction: transaction)
         transactionDateLbl.text = transaction.date ?? emptyLabelText
     }
+    @IBAction func openMapAction(_ sender: UIButton) {
+        didSelectOpenMap?(transation)
+    }
+    
 }

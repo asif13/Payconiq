@@ -22,10 +22,7 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
         super.viewDidLoad()
         fetchTransactions()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       tabBarController?.navigationItem.title =  "Transactions".localizedString
-    }
+  
     @IBAction func transactionTypeChanged(_ sender: UISegmentedControl) {
         guard let filterType = TransactionType(rawValue: sender.selectedSegmentIndex) else { return}
         viewModel.filterTransactions(filterType)
@@ -68,6 +65,15 @@ extension ListTransactionsViewController: UITableViewDelegate,UITableViewDataSou
             return UITableViewCell()
         }
         cell.updateCell(transaction: transaction)
+        cell.didSelectOpenMap = { transation in
+            DispatchQueue.main.async { [weak self] in
+                guard let mapVC : MapViewController = UIStoryboard.instance(identifier : StoryboardConstants.mapView) else {
+                    return
+                }
+                mapVC.viewModel = MapViewModel(model: transation)
+                self?.navigationController?.pushViewController(mapVC, animated: true)
+            }
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

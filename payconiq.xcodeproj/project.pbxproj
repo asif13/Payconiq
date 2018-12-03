@@ -22,6 +22,10 @@
 		7350051B21AEEB56004E0CAC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051A21AEEB56004E0CAC /* NetworkConstants.swift */; };
 		7350051D21AEEC2F004E0CAC /* ErrorMessagesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051C21AEEC2F004E0CAC /* ErrorMessagesConstants.swift */; };
 		7350052221AF0831004E0CAC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350052121AF0831004E0CAC /* Transaction.swift */; };
+		735E469D21B43C80006AAA74 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E469C21B43C80006AAA74 /* MapViewController.swift */; };
+		735E469F21B51FF2006AAA74 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E469E21B51FF2006AAA74 /* MapViewModel.swift */; };
+		735E46A321B551D9006AAA74 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E46A221B551D9006AAA74 /* UIStoryboard+Extension.swift */; };
+		735E46A521B595B7006AAA74 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E46A421B595B7006AAA74 /* StoryboardConstants.swift */; };
 		73D3583921B29AD000573D26 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583821B29AD000573D26 /* UserDetailsViewController.swift */; };
 		73D3583D21B29F5E00573D26 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583C21B29F5E00573D26 /* UserDetailViewModel.swift */; };
 		73D3584021B29F8D00573D26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583F21B29F8D00573D26 /* User.swift */; };
@@ -74,6 +78,10 @@
 		7350051A21AEEB56004E0CAC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		7350051C21AEEC2F004E0CAC /* ErrorMessagesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessagesConstants.swift; sourceTree = "<group>"; };
 		7350052121AF0831004E0CAC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		735E469C21B43C80006AAA74 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		735E469E21B51FF2006AAA74 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		735E46A221B551D9006AAA74 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		735E46A421B595B7006AAA74 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 		73D3583821B29AD000573D26 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		73D3583C21B29F5E00573D26 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		73D3583F21B29F8D00573D26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 			children = (
 				7350050D21AEBB2B004E0CAC /* List Transactions */,
 				73D3583721B29AA900573D26 /* UserDetails */,
+				735E469B21B43C5F006AAA74 /* MapView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -222,6 +231,7 @@
 		7350051921AEEB43004E0CAC /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				735E46A421B595B7006AAA74 /* StoryboardConstants.swift */,
 				7350051A21AEEB56004E0CAC /* NetworkConstants.swift */,
 				7350051C21AEEC2F004E0CAC /* ErrorMessagesConstants.swift */,
 				73D7391A21B174FF00D34993 /* ColorConstants.swift */,
@@ -253,6 +263,31 @@
 				7350051521AEEABE004E0CAC /* ListTransactionsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		735E469B21B43C5F006AAA74 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				735E46A021B51FF9006AAA74 /* View Model */,
+				735E46A121B52001006AAA74 /* View */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		735E46A021B51FF9006AAA74 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				735E469E21B51FF2006AAA74 /* MapViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		735E46A121B52001006AAA74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				735E469C21B43C80006AAA74 /* MapViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		73D3583721B29AA900573D26 /* UserDetails */ = {
@@ -294,6 +329,7 @@
 			children = (
 				73D7390A21B05B3300D34993 /* String+Extensions.swift */,
 				73D3584121B2B9B000573D26 /* Date+Extensions.swift */,
+				735E46A221B551D9006AAA74 /* UIStoryboard+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -576,14 +612,17 @@
 			files = (
 				73D7390F21B138C300D34993 /* ListTransactionTableViewCell.swift in Sources */,
 				7350052221AF0831004E0CAC /* Transaction.swift in Sources */,
+				735E46A521B595B7006AAA74 /* StoryboardConstants.swift in Sources */,
 				7350051B21AEEB56004E0CAC /* NetworkConstants.swift in Sources */,
 				7350051821AEEAFC004E0CAC /* NetworkFetchable.swift in Sources */,
 				73D3584021B29F8D00573D26 /* User.swift in Sources */,
 				73D3583921B29AD000573D26 /* UserDetailsViewController.swift in Sources */,
 				73D7390821B055FD00D34993 /* AlertDisplayable.swift in Sources */,
+				735E469D21B43C80006AAA74 /* MapViewController.swift in Sources */,
 				73D7391221B156BF00D34993 /* MapKitSnapshotImage.swift in Sources */,
 				73D3584221B2B9B000573D26 /* Date+Extensions.swift in Sources */,
 				73D7390B21B05B3300D34993 /* String+Extensions.swift in Sources */,
+				735E469F21B51FF2006AAA74 /* MapViewModel.swift in Sources */,
 				7350051D21AEEC2F004E0CAC /* ErrorMessagesConstants.swift in Sources */,
 				73D7391B21B174FF00D34993 /* ColorConstants.swift in Sources */,
 				735004DF21AEBA85004E0CAC /* AppDelegate.swift in Sources */,
@@ -592,6 +631,7 @@
 				73D3583D21B29F5E00573D26 /* UserDetailViewModel.swift in Sources */,
 				73D7391521B1690200D34993 /* PayconiqUtilities.swift in Sources */,
 				7350051321AECA34004E0CAC /* ListTransactionsViewController.swift in Sources */,
+				735E46A321B551D9006AAA74 /* UIStoryboard+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

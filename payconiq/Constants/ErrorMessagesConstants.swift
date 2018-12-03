@@ -6,7 +6,7 @@
 //  Copyright © 2018 Asif Junaid. All rights reserved.
 //
 
-import UIKit
+import Foundation
 struct NetworkErrors {
     static let serverError = "Cannot connect to server.Please try again later."
 }

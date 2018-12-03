@@ -17,8 +17,10 @@ class ListTransactionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var backgroundCellView: UIView!
     let emptyLabelText = "--"
-  
+    var didSelectOpenMap: ((_ transation : Transaction)->())? // closure called when open map is selected
+    var transation: Transaction!
     func updateCell(transaction:Transaction){
+        self.transation = transaction
         descriptionLbl.text = transaction.description ?? emptyLabelText
         effectiveDateLbl.text = transaction.effectiveDate ?? emptyLabelText
         amountLbl.text = transaction.currency ?? emptyLabelText
