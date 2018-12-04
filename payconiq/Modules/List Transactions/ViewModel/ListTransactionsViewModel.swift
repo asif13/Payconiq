@@ -32,7 +32,7 @@ class ListTransactionsViewModel: NetworkFetchable {
                 guard let transactions = try? decoder.decode([Transaction].self, from: data) else {
                     return
                 }
-                self?.transactions.append(contentsOf: transactions)
+                self?.appendTransactions(transactions)
                 successBlock(isFinal)
 
             case .failure(let error):
@@ -40,9 +40,13 @@ class ListTransactionsViewModel: NetworkFetchable {
             }
         }
     }
+    func appendTransactions(_ result: [Transaction]){
+        transactions.append(contentsOf: result)
+    }
     func getTotalBalance()->Double{
        return transactions.reduce(into: 0) { (result, transaction) in
             result = result + transaction.amount
+            print(result)
         }
     }
     func filterTransactions(_ type: TransactionType){

@@ -13,7 +13,6 @@
 		735004DF21AEBA85004E0CAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735004DE21AEBA85004E0CAC /* AppDelegate.swift */; };
 		735004E621AEBA8B004E0CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735004E521AEBA8B004E0CAC /* Assets.xcassets */; };
 		735004E921AEBA8B004E0CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735004E721AEBA8B004E0CAC /* LaunchScreen.storyboard */; };
-		735004F421AEBA8B004E0CAC /* payconiqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735004F321AEBA8B004E0CAC /* payconiqTests.swift */; };
 		735004FF21AEBA8B004E0CAC /* payconiqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735004FE21AEBA8B004E0CAC /* payconiqUITests.swift */; };
 		7350051121AEC9C6004E0CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7350051021AEC9C6004E0CAC /* Main.storyboard */; };
 		7350051321AECA34004E0CAC /* ListTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350051221AECA34004E0CAC /* ListTransactionsViewController.swift */; };
@@ -26,6 +25,9 @@
 		735E469F21B51FF2006AAA74 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E469E21B51FF2006AAA74 /* MapViewModel.swift */; };
 		735E46A321B551D9006AAA74 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E46A221B551D9006AAA74 /* UIStoryboard+Extension.swift */; };
 		735E46A521B595B7006AAA74 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E46A421B595B7006AAA74 /* StoryboardConstants.swift */; };
+		735E46A721B5B42A006AAA74 /* LIstTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E46A621B5B42A006AAA74 /* LIstTransactionTests.swift */; };
+		735E46AA21B670A6006AAA74 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 735E46A921B670A6006AAA74 /* transactions.json */; };
+		735E46AC21B67FBE006AAA74 /* UserDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E46AB21B67FBD006AAA74 /* UserDetailTests.swift */; };
 		73D3583921B29AD000573D26 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583821B29AD000573D26 /* UserDetailsViewController.swift */; };
 		73D3583D21B29F5E00573D26 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583C21B29F5E00573D26 /* UserDetailViewModel.swift */; };
 		73D3584021B29F8D00573D26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3583F21B29F8D00573D26 /* User.swift */; };
@@ -66,7 +68,6 @@
 		735004E821AEBA8B004E0CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		735004EA21AEBA8B004E0CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		735004EF21AEBA8B004E0CAC /* payconiqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = payconiqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		735004F321AEBA8B004E0CAC /* payconiqTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payconiqTests.swift; sourceTree = "<group>"; };
 		735004F521AEBA8B004E0CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		735004FA21AEBA8B004E0CAC /* payconiqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = payconiqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		735004FE21AEBA8B004E0CAC /* payconiqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payconiqUITests.swift; sourceTree = "<group>"; };
@@ -82,6 +83,9 @@
 		735E469E21B51FF2006AAA74 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		735E46A221B551D9006AAA74 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		735E46A421B595B7006AAA74 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
+		735E46A621B5B42A006AAA74 /* LIstTransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIstTransactionTests.swift; sourceTree = "<group>"; };
+		735E46A921B670A6006AAA74 /* transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions.json; sourceTree = "<group>"; };
+		735E46AB21B67FBD006AAA74 /* UserDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTests.swift; sourceTree = "<group>"; };
 		73D3583821B29AD000573D26 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		73D3583C21B29F5E00573D26 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		73D3583F21B29F8D00573D26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -184,7 +188,9 @@
 		735004F221AEBA8B004E0CAC /* payconiqTests */ = {
 			isa = PBXGroup;
 			children = (
-				735004F321AEBA8B004E0CAC /* payconiqTests.swift */,
+				735E46A821B67091006AAA74 /* Network Stubs */,
+				735E46A621B5B42A006AAA74 /* LIstTransactionTests.swift */,
+				735E46AB21B67FBD006AAA74 /* UserDetailTests.swift */,
 				735004F521AEBA8B004E0CAC /* Info.plist */,
 			);
 			path = payconiqTests;
@@ -288,6 +294,14 @@
 				735E469C21B43C80006AAA74 /* MapViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		735E46A821B67091006AAA74 /* Network Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				735E46A921B670A6006AAA74 /* transactions.json */,
+			);
+			path = "Network Stubs";
 			sourceTree = "<group>";
 		};
 		73D3583721B29AA900573D26 /* UserDetails */ = {
@@ -500,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735E46AA21B670A6006AAA74 /* transactions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,7 +654,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				735004F421AEBA8B004E0CAC /* payconiqTests.swift in Sources */,
+				735E46A721B5B42A006AAA74 /* LIstTransactionTests.swift in Sources */,
+				735E46AC21B67FBE006AAA74 /* UserDetailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
