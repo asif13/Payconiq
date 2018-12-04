@@ -14,5 +14,22 @@
     4) You can tap on transaction to see transacted date and effective date.
     5) Expanded view also give a button to open map in Modal view, if the user wanted to know more about the location
     
-    User Detail Screen consists of display user details in user tab.
+    User Detail Screen consists of displaying user details in user tab.
 
+##Unit Testing 
+
+    1) Business logic for transation list has been written which includes
+        - testing filter options 
+        - service request for transation
+        - test total balance calculated
+    2)User details service request is unit tested. 
+
+##UI Testing
+
+    1)UI Testing for -
+        - Testing segment tap changes the selected value
+        - Taping on list, expands its view
+        - Tapping on open map, open map
+        - Tapping on user tab navigates to User tab
+        
+### Testing coverage of 80%

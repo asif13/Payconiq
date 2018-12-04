@@ -46,7 +46,6 @@ class ListTransactionsViewModel: NetworkFetchable {
     func getTotalBalance()->Double{
        return transactions.reduce(into: 0) { (result, transaction) in
             result = result + transaction.amount
-            print(result)
         }
     }
     func filterTransactions(_ type: TransactionType){

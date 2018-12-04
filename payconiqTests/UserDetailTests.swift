@@ -18,17 +18,15 @@ class UserDetailTests: XCTestCase {
     override func tearDown() {
         viewModel = nil
     }
-    func testTransactionListService(){
+    func testUserListService(){
         let promise = expectation(description: "Expecting data from user serivce")
-        
-        viewModel?.getData(url: NetworkConstants.user.endPoint, completion: { (status) in
-            switch status {
-            case .success(_, _): break
-            case .failure(let error):
-                XCTFail(error)
-            }
+        viewModel?.fetchUser(successBlock: {
+            promise.fulfill()
+        }, failureBlock: { (error) in
+            XCTFail(error)
             promise.fulfill()
         })
+        
         waitForExpectations(timeout: 5, handler: nil)
         
     }

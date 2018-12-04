@@ -65,6 +65,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Filter Segment"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="transactionTypeChanged:" destination="f5c-og-664" eventType="valueChanged" id="aOp-kz-aHD"/>
@@ -205,6 +206,9 @@
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="description"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJ8-l5-7V0">
                                                             <rect key="frame" x="8" y="31" width="43" height="50"/>

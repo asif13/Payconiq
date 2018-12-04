@@ -30,20 +30,19 @@ class ListTransactionTests: XCTestCase {
         guard let transactions = try? decoder.decode([Transaction].self, from: data) else {
             return []
         }
-        print(transactions)
         return transactions
     }
     func testTransactionListService(){
         let promise = expectation(description: "Expecting data from transation serivce")
-
-        viewModel?.getData(url: NetworkConstants.transactionList.endPoint, completion: { (status) in
-            switch status {
-            case .success(_, _): break
-            case .failure(let error):
-                XCTFail(error)
+        viewModel?.fetchTransactions(successBlock: { (isFinal) in
+            if isFinal {
+                promise.fulfill()
             }
+        }, failureBlock: { (error) in
+            XCTFail(error)
             promise.fulfill()
         })
+       
         waitForExpectations(timeout: 5, handler: nil)
         
     }
