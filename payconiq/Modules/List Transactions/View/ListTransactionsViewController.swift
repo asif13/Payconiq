@@ -17,7 +17,7 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
         case `default` = "ListTransactionCell"
         case expanded = "ListTransactionExpandedCell"
     }
-    var expandedCellIndexes = Set<Transaction>()
+    var expandedCellIndexes = Set<Transaction>()//Contains set of expanaded transation
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchTransactions()
@@ -71,6 +71,7 @@ extension ListTransactionsViewController: UITableViewDelegate,UITableViewDataSou
         cell.updateCell(transaction: transaction)
         cell.didSelectOpenMap = { transation in
             DispatchQueue.main.async { [weak self] in
+                //Open map with the transation
                 guard let mapVC : MapViewController = UIStoryboard.instance(identifier : StoryboardConstants.mapView) else {
                     return
                 }
@@ -82,7 +83,8 @@ extension ListTransactionsViewController: UITableViewDelegate,UITableViewDataSou
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let transaction = viewModel.filteredTransactions[indexPath.row]
-
+      
+        //Update expandedCellIndexes
         if expandedCellIndexes.contains(transaction) {
             expandedCellIndexes.remove(transaction)
         }else {

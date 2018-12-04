@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-let imageCache = NSCache<AnyObject, UIImage>()
+let mapImageCache = NSCache<AnyObject, UIImage>()//Caches Images already generated for location
 
 extension UIImageView {
     /// Create an image of the image from given location
@@ -17,7 +17,7 @@ extension UIImageView {
     /// - Parameter key: location coordinate
     func setSnapshotOfLocationAsImage(key: CLLocationCoordinate2D){
         
-        if let imageFromCache = imageCache.object(forKey: key as AnyObject) {
+        if let imageFromCache = mapImageCache.object(forKey: key as AnyObject) {
             self.image = imageFromCache
             return
         }
@@ -34,7 +34,7 @@ extension UIImageView {
             guard let image = snapshot?.image else { return }
             
             DispatchQueue.main.async {
-                imageCache.setObject(image, forKey: key as AnyObject)
+                mapImageCache.setObject(image, forKey: key as AnyObject)
                 self.image = image
             }
         }

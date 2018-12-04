@@ -33,6 +33,7 @@ struct Transaction: Codable,Hashable {
     }
     var currency:String?{
         get {
+            //convert to currency format
             return PayconiqUtilities.parseAmountToCurrency(amountStr)
         }
     }
