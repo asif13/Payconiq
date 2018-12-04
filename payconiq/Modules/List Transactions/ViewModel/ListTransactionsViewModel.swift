@@ -22,6 +22,11 @@ class ListTransactionsViewModel: NetworkFetchable {
         }
     }
     var filteredTransactions = [Transaction]()
+    /// Fetch transations from server and store it in model
+    ///
+    /// - Parameters:
+    ///   - successBlock: called when succes
+    ///   - failureBlock: pass error to view controller
     func fetchTransactions(successBlock: @escaping ((_ isFinal:Bool)->()),failureBlock: @escaping ((String)->())){
         getData(url: NetworkConstants.transactionList.endPoint) { [weak self] (response) in
 
@@ -40,14 +45,23 @@ class ListTransactionsViewModel: NetworkFetchable {
             }
         }
     }
+    /// Append transations to model
+    ///
+    /// - Parameter result: transations
     func appendTransactions(_ result: [Transaction]){
         transactions.append(contentsOf: result)
     }
+    /// Return the total balance calculated from transations
+    ///
+    /// - Returns: Balance
     func getTotalBalance()->Double{
        return transactions.reduce(into: 0) { (result, transaction) in
             result = result + transaction.amount
         }
     }
+    /// Filter transation from passed filter type
+    ///
+    /// - Parameter type: filter type
     func filterTransactions(_ type: TransactionType){
         switch type {
             

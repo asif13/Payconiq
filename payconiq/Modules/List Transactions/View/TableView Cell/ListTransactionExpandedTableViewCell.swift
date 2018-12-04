@@ -16,6 +16,9 @@ class ListTransactionExpandedTableViewCell: ListTransactionTableViewCell {
         super.awakeFromNib()
         openMapBtn.layer.borderColor = ColorConstants.border.cgColor
     }
+    /// Update cell from model
+    ///
+    /// - Parameter transaction: transation
     override func updateCell(transaction:Transaction){
         super.updateCell(transaction: transaction)
         transactionDateLbl.text = transaction.date ?? emptyLabelText

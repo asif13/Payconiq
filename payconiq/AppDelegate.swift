@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        updateNavigationBar()
         return true
     }
+    /// Update Navigation bar appearance
     func updateNavigationBar(){
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().shadowImage = UIImage()

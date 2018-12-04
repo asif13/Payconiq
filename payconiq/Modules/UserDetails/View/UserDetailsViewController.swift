@@ -18,6 +18,7 @@ class UserDetailsViewController: UIViewController,AlertDisplayable,NVActivityInd
         loadUserDetails()
     }
 
+    /// Initiate user details loading
     func loadUserDetails(){
         startAnimating(message: "Loading".localizedString, type: .circleStrokeSpin)
         viewModel.fetchUser(successBlock: {
@@ -32,6 +33,7 @@ class UserDetailsViewController: UIViewController,AlertDisplayable,NVActivityInd
             }
         }
     }
+    /// Update outlets with user information
     func updateUserDetails(){
         userNameLbl.text = viewModel.model?.fullName
         birthAndCountryDetailsLbl.text = viewModel.getExtraInfoOnUser()

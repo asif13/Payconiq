@@ -10,6 +10,13 @@ import UIKit
 
 extension UIStoryboard {
     
+    /// Return an instance of UIViewcontroller
+    ///
+    /// - Parameters:
+    ///   - name: Storyboard name
+    ///   - bundle: bundle name
+    ///   - identifier: Identifer for UIViewcontroller
+    /// - Returns: Instance of Viewcontoller
     class func instance<T: UIViewController>(name: String = "Main", bundle: Bundle? = nil, identifier: String? = nil) -> T? {
         let storyboard = UIStoryboard(name: name, bundle: bundle)
         

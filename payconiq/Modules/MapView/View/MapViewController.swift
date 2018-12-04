@@ -18,9 +18,10 @@ class MapViewController: UIViewController {
         
         title = "Transaction Location"
         tabBarController?.navigationController?.title = "Transaction Location"
-        openMapWithTransactionLocation()
+        pinMapWithTransactionLocation()
     }
-    func openMapWithTransactionLocation(){
+    ///Pin map with transaction location
+    func pinMapWithTransactionLocation(){
         guard let coordinate = viewModel.model.coordinates else{
             return
         }

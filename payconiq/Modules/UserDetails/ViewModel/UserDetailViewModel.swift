@@ -10,6 +10,11 @@ import Foundation
 
 class UserDetailViewModel: NetworkFetchable {
     var model: User?
+    /// Fetch user data
+    ///
+    /// - Parameters:
+    ///   - successBlock: blocked called on success
+    ///   - failureBlock: blocked called on failure
     func fetchUser(successBlock: @escaping (()->()),failureBlock: @escaping ((String)->())){
         getData(url: NetworkConstants.user.endPoint) { [weak self] (status) in
             switch status {
@@ -25,6 +30,9 @@ class UserDetailViewModel: NetworkFetchable {
             }
         }
     }
+    /// Create a message to display extra user info
+    ///
+    /// - Returns: message 
     func getExtraInfoOnUser()->String{
         return "Born on ".localizedString + (model?.birthdate ?? "") + " in ".localizedString + (model?.nationality ?? "")
     }

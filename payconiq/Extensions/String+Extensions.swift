@@ -12,9 +12,13 @@ extension String {
     var localizedString: String {
         return NSLocalizedString(self, comment: "")
     }
-    /*
-     Convert date from server fomat to app format
-     */
+ 
+    /// Convert date from server fomat to app format
+    ///
+    /// - Parameters:
+    ///   - format: server date format
+    ///   - toFormat: app date format
+    /// - Returns: date in string
     func date(format: String , toFormat : String) -> String? {
         let formatter = DateFormatter()
         formatter.dateFormat = format

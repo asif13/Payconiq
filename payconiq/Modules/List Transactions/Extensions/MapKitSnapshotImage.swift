@@ -12,6 +12,9 @@ import MapKit
 let imageCache = NSCache<AnyObject, UIImage>()
 
 extension UIImageView {
+    /// Create an image of the image from given location
+    ///
+    /// - Parameter key: location coordinate
     func setSnapshotOfLocationAsImage(key: CLLocationCoordinate2D){
         
         if let imageFromCache = imageCache.object(forKey: key as AnyObject) {

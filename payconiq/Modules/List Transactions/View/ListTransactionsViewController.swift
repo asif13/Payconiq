@@ -23,11 +23,15 @@ class ListTransactionsViewController: UIViewController,AlertDisplayable,NVActivi
         fetchTransactions()
     }
   
+    /// Segment action for filter changed
+    ///
+    /// - Parameter sender: sender object
     @IBAction func transactionTypeChanged(_ sender: UISegmentedControl) {
         guard let filterType = TransactionType(rawValue: sender.selectedSegmentIndex) else { return}
         viewModel.filterTransactions(filterType)
         transactionListTbl.reloadData()
     }
+    /// Fetch transations from server
     func fetchTransactions(){
         startAnimating(message: "Loading".localizedString, type: .circleStrokeSpin)
         viewModel.fetchTransactions(successBlock: { isFinal in

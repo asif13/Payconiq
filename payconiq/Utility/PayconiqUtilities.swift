@@ -9,9 +9,11 @@
 import MapKit
 
 struct PayconiqUtilities {
-    /*
-     Parse the coordinates from string to CLLocation, so that it can be used easily by MapKit
-     */
+
+    /// Parse the coordinates from string to CLLocation, so that it can be used easily by MapKit
+    ///
+    /// - Parameter coordinate: coordinate in string
+    /// - Returns: coordinate
     static func parseCoordinates(_ coordinate:String?)->CLLocationCoordinate2D?{
         guard let coordinatesStr = coordinate else { return nil }
       
@@ -24,16 +26,20 @@ struct PayconiqUtilities {
         
         return  CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1])
     }
-    /*
-     Convert amount from string to Double
-     */
+  
+    /// Convert amount from string to Double
+    ///
+    /// - Parameter amountStr: amount in string
+    /// - Returns: amount in double
     static func parseAmount(_ amountStr:String?)->Double?{
         guard let amount = amountStr else { return nil }
         return Double(amount.replacingOccurrences(of: ",", with: "."))
     }
-    /*
-     Convert amount from string to local currency string
-     */
+   
+    ///  Convert amount from string to local currency string
+    ///
+    /// - Parameter amountStr: amount in string
+    /// - Returns: amount in currency format
     static func parseAmountToCurrency(_ amountStr:String?)->String?{
         guard let amount = parseAmount(amountStr)
             else { return nil }

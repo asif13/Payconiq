@@ -20,6 +20,11 @@ protocol NetworkFetchable {
 
 extension NetworkFetchable {
     
+    /// Fetch data from server
+    ///
+    /// - Parameters:
+    ///   - url: url to fetch data from
+    ///   - completion: completion block for passing success or failure
     func getData(url : URL, completion: @escaping ((NetworkResponseStatus) -> ())){
         Alamofire.request(url).responseJSON { (response) in
          

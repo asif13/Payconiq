@@ -19,6 +19,9 @@ class ListTransactionTableViewCell: UITableViewCell {
     let emptyLabelText = "--"
     var didSelectOpenMap: ((_ transation : Transaction)->())? // closure called when open map is selected
     var transation: Transaction!
+    /// Update cell from model
+    ///
+    /// - Parameter transaction: transation
     func updateCell(transaction:Transaction){
         self.transation = transaction
         descriptionLbl.text = transaction.description ?? emptyLabelText
